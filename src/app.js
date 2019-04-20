@@ -99,7 +99,11 @@ app.get('/weather', (req, res) => {
     }
 })
 
-app.listen('3000', () => {
+// for heroku port and default port as well if app is not running on heroku
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log('Server Running');
 })
 

@@ -13,7 +13,7 @@ formData.addEventListener('submit', (e) => {
     }
     const mainDiv = document.querySelector('.main-div')
     mainDiv.innerHTML='';
-    fetch('http://localhost:3000/weather?city='+city)
+    fetch('/weather?city='+city)
     .then(res => {
         res.json()
         .then(info => {
